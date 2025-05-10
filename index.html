@@ -9,45 +9,35 @@
 </head>
 <body>
     <header>
-        <img src="escudo_acoandes.jpg" alt="Escudo ACOANDES" style="position: absolute; top: 0; left: 0;">
+        <img src="escudo_acoandes.jpg" alt="Escudo ACOANDES" class="logo">
         <h1>Colegio Academia Técnica Comercial de los Andes</h1>
+        <nav>
+            <ul>
+                <li><a href="#mision">Misión</a></li>
+                <li><a href="#vision">Visión</a></li>
+                <li><a href="#info">Información</a></li>
+                <li><a href="https://identity.santillanaconnect.com/login/?client_id=neds_client_compartir_colombia_pro&next=/connect/authorize%3Fresponse_type%3Dcode%26client_id%3Dneds_client_compartir_colombia_pro%26scope%3Dopenid%2Bprofile%2Bemail%2Brole%2Bexternal.info%2Bneds%252Ffull_access%26state%3Ds3hZrGSu1rYrfkFg4H_z-6nKNbYJfp5O0BLIwztXnHk%253D%26redirect_uri%3Dhttps%253A%252F%252Fedi-compartir-co.stn-neds.com%252Fts%252Flogin%252Foauth2%252Fcode%252Fcompartirco%26code_challenge_method%3DS256%26nonce%3Df_ixdIpuYFtJ05ogdrAyQ-oxaVu7_IYYq6oWdS0UWc4%26code_challenge%3DJi8C4PgZ1iX40fhAWEoMkrQ5zR-8Z1cDJQCw-sJH4aI" target="_blank">Santillana</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <button class="accordion">Misión</button>
-        <div class="panel">
-            <p>El colegio ACADEMIA TÉCNICA COMERCIAL DE LOS ANDES “ACOANDES” de Cúcuta, siendo una Institución Educativa de carácter privado, ofrece un bachillerato técnico en el Área Técnica en Sistemas y Técnica en Asistencia Administrativa en articulación con el Servicio Nacional de Aprendizaje “SENA”, donde el plan de estudios se desarrolla desde jardín hasta undécimo grado. Ofrece un servicio educativo de calidad mediante un proceso individual y social de formación, aplicando una pedagogía activa que le permita al estudiante aprender haciendo, conjugando el conocimiento y la práctica, desarrollo de la creatividad, el análisis, la capacidad crítica, científica e investigativa; que lo conduce a una formación integral.</p>
-        </div>
+        <section id="mision">
+            <h2>Misión</h2>
+            <p>El colegio ACADEMIA TÉCNICA COMERCIAL DE LOS ANDES “ACOANDES” de Cúcuta, siendo una Institución Educativa de carácter privado, ofrece un bachillerato técnico en el Área Técnica en Sistemas y Técnica en Asistencia Administrativa en articulación con el SENA. El plan de estudios se desarrolla desde jardín hasta undécimo grado, con una pedagogía activa, creativa y crítica, para una formación integral que fomente valores, el uso de tecnologías y preparación para la vida laboral o profesional.</p>
+        </section>
 
-        <button class="accordion">Visión</button>
-        <div class="panel">
-            <p>La Institución Educativa ACADEMIA TÉCNICA COMERCIAL DE LOS ANDES “ACOANDES” se proyecta para el año 2025 en la formación en el Área Técnica en Sistemas y Técnica en Asistencia Administrativa, con carácter social, gran competitividad laboral contable, científica y Tecnológica con proyección a la producción y prácticas de los nuevos avances tecnológicos, y con una alta calidad humana, capaces de enfrentar los retos y desafíos de la sociedad actual desde un sólido proyecto de vida personal y Profesional, con un sentido de pertenencia y compromiso ciudadano en el desarrollo regional y nacional.</p>
-        </div>
+        <section id="vision">
+            <h2>Visión</h2>
+            <p>ACOANDES se proyecta para el año 2025 como una institución de alta calidad humana, técnica y científica, con formación en Sistemas y Asistencia Administrativa, competitiva, con visión social y con bases para enfrentar los desafíos del entorno profesional, empresarial y educativo.</p>
+        </section>
 
-        <button class="accordion">Información Institucional</button>
-        <div class="panel">
-            <p><strong>Nombre:</strong> Colegio Academia Técnica Comercial de los Andes E.U. ACOANDES<br>
-            <strong>Código DANE:</strong> 354001004413<br>
-            <strong>Dirección:</strong> CL 15 2 51, Cúcuta, Norte de Santander<br>
-            <strong>Teléfono:</strong> +57 310 3040247<br>
-            <strong>Calendario:</strong> A<br>
-            <strong>Zona:</strong> Urbana<br>
-            <strong>Rector:</strong> Medardo Angarita Santos<br>
-            <strong>Carácter:</strong> Académico, Técnico<br>
-            <strong>Especialidad:</strong> Comercial<br>
-            <strong>Niveles:</strong> Preescolar, Primaria, Secundaria y Media<br>
-            <strong>Modelos:</strong> Educación tradicional y programa para jóvenes en extraedad y adultos</p>
-        </div>
+        <section id="info">
+            <h2>Información de contacto</h2>
+            <p><strong>Dirección:</strong> Calle 15 #2-51, Cúcuta, Norte de Santander</p>
+            <p><strong>Teléfono:</strong> +57 310 3040247</p>
+            <p><strong>Correo:</strong> contacto@acoandes.edu.co</p>
+        </section>
     </main>
-
-    <script>
-        const acc = document.getElementsByClassName("accordion");
-        for (let i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-                const panel = this.nextElementSibling;
-                panel.style.display = (panel.style.display === "block") ? "none" : "block";
-            });
-        }
-    </script>
 </body>
 </html>
