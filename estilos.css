@@ -1,107 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
-
-header {
-    background-color: #2a3d66;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-.top-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.logo {
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-h1 {
-    margin: 0;
-    font-size: 1.8em;
-}
-
-h1 span {
-    font-style: italic;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 15px 0 0 0;
-}
-
-nav ul li a {
-    background-color: white;
-    color: #2a3d66;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-nav ul li a:hover {
-    background-color: #d6dff0;
-}
-
-.santillana-btn img {
-    height: 25px;
-    width: auto;
-    vertical-align: middle;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 900px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#institucion {
-    text-align: center;
-}
-
-#institucion img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-}
-
-#institucion p {
-    font-size: 1.2em;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-iframe {
-    width: 100%;
-    height: 450px;
-    border: 0;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
-}
-
 #redes {
   text-align: center;
   background-color: #ffffff;
@@ -124,7 +20,7 @@ iframe {
   font-size: 1.1em;
 }
 
-.redes-container {
+.redes-sociales {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -142,6 +38,8 @@ iframe {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 260px;
   justify-content: flex-start;
+  text-decoration: none;
+  color: #2a3d66;
 }
 
 .red-social:hover {
@@ -155,11 +53,12 @@ iframe {
   transition: transform 0.3s ease;
 }
 
-.icono:hover img {
+.red-social:hover img {
   transform: scale(1.1);
 }
 
 .red-social span {
   font-size: 1.1em;
   color: #2a3d66;
+  font-weight: bold;
 }
