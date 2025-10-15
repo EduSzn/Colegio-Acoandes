@@ -1,97 +1,135 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colegio ACOANDES</title>
-    <link rel="icon" type="image/jpeg" href="EscudoAcoandes2.png">
-    <link rel="stylesheet" href="estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="top-bar">
-            <img src="EscudoAcoandes2.png" alt="Escudo ACOANDES" class="logo">
-            <h1>Colegio Academia Técnica Comercial de los Andes<br><span>"ACOANDES"</span></h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#mision">Misión</a></li>
-                <li><a href="#vision">Visión</a></li>
-                <li><a href="#info">Información</a></li>
-                <li>
-                    <a href="https://identity.santillanaconnect.com/login/?client_id=neds_client_compartir_colombia_pro"
-                       target="_blank" class="santillana-btn">
-                        <img src="descargar.png" alt="Santillana">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f5f6fa;
+    color: #333;
+    scroll-behavior: smooth;
+}
 
-    <main>
-        <section id="institucion" class="fade-in">
-            <h2>Esta es nuestra institución</h2>
-            <img src="ColegioAcoandes.avif" alt="Foto del Colegio Acoandes">
-            <p>
-                Nuestra institución cuenta con enseñanzas de preescolar, primaria y bachillerato técnico, 
-                en convenio con el SENA con las técnicas de sistemas y asistencia administrativa. 
-                La jornada es en la mañana y contamos con asesorías de tareas en las tardes.
-            </p>
-        </section>
+/* Encabezado */
+header {
+    background-color: #2a3d66;
+    color: white;
+    padding: 20px 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    position: static;
+}
 
-        <section id="mision" class="card fade-in">
-            <h2>Misión</h2>
-            <p>El colegio ACADEMIA TÉCNICA COMERCIAL DE LOS ANDES “ACOANDES” de Cúcuta, siendo una Institución Educativa de carácter privado, ofrece un bachillerato técnico en el Área Técnica en Sistemas y Técnica en Asistencia Administrativa en articulación con el SENA. El plan de estudios se desarrolla desde jardín hasta undécimo grado, con una pedagogía activa, creativa y crítica, para una formación integral que fomente valores, el uso de tecnologías y preparación para la vida laboral o profesional.</p>
-        </section>
+.top-bar {
+    text-align: center;
+}
 
-        <section id="vision" class="card fade-in">
-            <h2>Visión</h2>
-            <p>ACOANDES se proyecta como una institución de alta calidad humana, técnica y científica, con formación en Sistemas y Asistencia Administrativa, competitiva, con visión social y con bases para enfrentar los desafíos del entorno profesional, empresarial y educativo.</p>
-        </section>
+.logo {
+    width: 90px;
+    margin-bottom: 10px;
+}
 
-        <section id="info" class="card fade-in">
-            <h2>Información de contacto</h2>
-            <p><strong>Dirección:</strong> Calle 15 #2-51, Cúcuta, Norte de Santander, Barrio La Playa</p>
+h1 {
+    margin: 0;
+    font-size: 1.3em;
+}
 
-            <div class="map-container">
-                <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8670568916526!2d-72.50297918523812!3d7.882168594293875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6645992d3db8ad%3A0x82e86f461730fb76!2sColegio%20Acoandes!5e0!3m2!1ses!2sco!4v1718132684123!5m2!1ses!2sco" 
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+h1 span {
+    font-weight: 400;
+}
 
-            <p><strong>Teléfono:</strong> +57 312 4011790</p>
-            <p><strong>Correo:</strong> Acoandescucuta@gmail.com</p>
-        </section>
-    </main>
+/* Menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
 
-    <footer>
-        <p>© 2025 Colegio Academia Técnica Comercial de los Andes - ACOANDES. Todos los derechos reservados.</p>
-    </footer>
+nav a {
+    background-color: white;
+    color: #2a3d66;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
 
-    <script>
-        // Scroll suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+nav a:hover {
+    background-color: #dfe6f0;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
 
-        // Efecto de aparición
-        const faders = document.querySelectorAll('.fade-in');
-        const appearOptions = { threshold: 0.2 };
-        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            });
-        }, appearOptions);
+/* Botón Santillana */
+.santillana-btn img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
 
-        faders.forEach(fader => appearOnScroll.observe(fader));
-    </script>
-</body>
-</html>
+/* Secciones */
+main {
+    padding: 30px 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Tarjetas */
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Mapa */
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Animación aparición */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    background-color: #2a3d66;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9em;
+    margin-top: 30px;
+    border-top: 3px solid #1d2b4d;
+}
